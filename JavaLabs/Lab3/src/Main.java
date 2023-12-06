@@ -24,7 +24,7 @@ public class Main {
         System.out.println();
 
         Malish.seat(houseOnTheRoof);
-        Carlson.seat(houseOnTheRoof);
+        Carlson.seat(houseOnTheRoof.fireplace);
         System.out.println();
 
         Malish.setState(Feelings.GOOD);
@@ -38,7 +38,7 @@ public class Main {
         System.out.println();
 
         Carlson.fly(hetergeStreet);
-        Carlson.move(Shop);
+        Carlson.move(hetergeStreet.Houses[1]);
         Carlson.buy(new Apple());
     }
 }

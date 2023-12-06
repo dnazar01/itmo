@@ -28,6 +28,12 @@ public class Provocateur extends Character implements Flyable, Movable{
     }
     public void seat(Place place){
         super.setLocation(place);
-        System.out.println(super.getName() + " сидит в " + place.getName());
+        if (place.getClass() == Fireplace.class){
+            System.out.println(super.getName() + " сидит у камина в Домике на крыше");
+        }
+        else {
+            System.out.println(super.getName() + " сидит в " + place.getName());
+        }
+
     }
 }
