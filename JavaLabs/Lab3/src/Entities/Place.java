@@ -13,16 +13,8 @@ public abstract class Place {
         this.chaosPoints = chaosPoints;
     }
 
-    public void addGuest(Character c){
-        this.guests.add(c);
-    }
-
     public void removeGuest(Character c){
         this.guests.remove(c);
-    }
-
-    public Boolean isCharacterHere(Character c){
-        return this.guests.contains(c);
     }
 
     @Override
@@ -43,9 +35,9 @@ public abstract class Place {
 
     public void removeChaosPoints(int cleanPoints){
         this.chaosPoints -= cleanPoints;
-        System.out.println("Теперь "+this.getName()+" чище на " + cleanPoints + "очков");
+        System.out.println("Теперь "+this.getName()+" чище на " + cleanPoints + " очков");
         if (this.chaosPoints <= 0){
-            System.out.println("Теперь "+ this.name+ "полностью чистое");
+            System.out.println("Теперь "+ this.name+ " полностью чистое");
         }
     }
 

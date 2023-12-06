@@ -7,19 +7,14 @@ public class Housekeeper extends Character implements Movable {
     public Housekeeper(){
         super("Фрекен Бок");
     }
-    public void move(Place place){
-        super.setLocation(place);
-        System.out.println(super.getName() + " переместилась в " + place.getName());
-    }
-    public void seat(Place place){
-        super.setLocation(place);
-        System.out.println(super.getName() + " сидит в " + place.getName());
-    }
     public void spendLastHoursInCalm(Place place){
         System.out.println(super.getName() + " проводит последние часы в " + place.getName());
         if (place.guests.isEmpty()){
             setState(Feelings.CALM);
             System.out.println("Потому что в этом месте никого нет");
+        }
+        else{
+            setState(Feelings.ANNOYED);
         }
     }
 

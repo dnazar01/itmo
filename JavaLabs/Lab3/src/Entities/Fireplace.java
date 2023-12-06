@@ -6,6 +6,9 @@ public class Fireplace extends Place {
     public Fireplace() {
         super("Камин", 0);
     }
+    public String getHouseName(House house) {
+        return house.getName(); // Получаем имя House из объекта House
+    }
 
     public void burn() {
         System.out.println(this.getName() + " горит");

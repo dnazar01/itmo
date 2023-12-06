@@ -49,7 +49,7 @@ public abstract class Character implements Movable {
                 System.out.println(this.getName() + " чувствует себя " + "грустно");
                 break;
             case SOLID:
-                System.out.println(this.getName() + " чувствует себя " + "уверенно/убедительно");
+                System.out.println(this.getName() + " чувствует себя " + "убедительно");
                 break;
             case COMFORT:
                 System.out.println(this.getName() + " чувствует себя " + "комфортно");
@@ -62,6 +62,9 @@ public abstract class Character implements Movable {
                 break;
             case CLEVER:
                 System.out.println(this.getName() + " чувствует себя " + "умным");
+                break;
+            case ANNOYED:
+                System.out.println(this.getName() + " чувствует себя " + "раздраженно");
                 break;
         }
 

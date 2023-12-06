@@ -26,11 +26,16 @@ public class Main {
         System.out.println();
 
         Malish.seat(houseOnTheRoof.fireplace);
+        System.out.println();
+
         Carlson.seat(houseOnTheRoof.fireplace);
         System.out.println();
 
         Carlson.fly(hetergeStreet);
         Carlson.move(hetergeStreet.Houses[1]);
-        Carlson.buy(apple);
+        for (int i=0;i<=2;++i){
+            Carlson.buy(apple);
+        }
+
     }
 }

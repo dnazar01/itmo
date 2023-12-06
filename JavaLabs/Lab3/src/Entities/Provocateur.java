@@ -2,8 +2,9 @@ package Entities;
 
 import Enums.Feelings;
 import Interfaces.*;
+
 public class Provocateur extends Character implements Flyable {
-    private int moneyOnWallet = 10000000;
+    private int moneyOnWallet = 200;
 
     public Provocateur() {
         super("Карлсон");
@@ -19,7 +20,7 @@ public class Provocateur extends Character implements Flyable {
     }
 
     public void seemEarnestly() {
-        System.out.println(super.getName() + "у показалось это убедительно");
+        System.out.println(super.getName() + " показалось это убедительно");
         this.setState(Feelings.SOLID);
     }
 
@@ -33,9 +34,22 @@ public class Provocateur extends Character implements Flyable {
         this.setLocation(place);
         if (place.getClass() == Fireplace.class) {
             System.out.println(super.getName() + " сидит у камина в Домике на крыше");
-            this.setState(Feelings.GOOD);
-            this.setState(Feelings.COSY);
-            this.setState(Feelings.CALM);
+            Boolean flag = Boolean.TRUE;
+            if (!place.guests.isEmpty()) {
+                for (Character guest : place.guests) {
+                    if (guest.getClass() == Housekeeper.class) {
+                        this.setState(Feelings.SAD);
+                        System.out.println("Потому что рядом есть " + guest.getName());
+                        flag = Boolean.FALSE;
+                    }
+                }
+            }
+            if (flag){
+                this.setState(Feelings.GOOD);
+                this.setState(Feelings.COSY);
+                this.setState(Feelings.CALM);
+                System.out.println("Потому что рядом нет Фрекен Бок");
+            }
         } else {
             System.out.println(super.getName() + " сидит в " + place.getName());
         }
