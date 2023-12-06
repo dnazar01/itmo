@@ -5,16 +5,18 @@ import Enums.Feelings;
 public class Main {
     public static void main(String[] args) {
 
-        Fireplace fireplace = new Fireplace("Камин");
-        HouseOnTheRoof houseOnTheRoof = new HouseOnTheRoof(fireplace);
+        Fireplace fireplace = new Fireplace();
+        House houseOnTheRoof = new House("Домик на крыше");
+        houseOnTheRoof.setFireplace(fireplace);
+
         House SvatensonHouse = new House("Дом семьи Cватенсон");
         House Shop = new House("Магазин продуктов");
-
-        Street hetergeStreet = new Street("Улица Хетерге", new House[]{SvatensonHouse, Shop});
+        Street hetergeStreet = new Street("Улица Хетерге", new House[]{SvatensonHouse, Shop, houseOnTheRoof});
 
         Provocateur Carlson = new Provocateur();
         Child Malish = new Child();
         Housekeeper MissBock = new Housekeeper();
+
         Apple apple = new Apple();
 
         Carlson.seemEarnestly();
@@ -27,18 +29,8 @@ public class Main {
         Carlson.seat(houseOnTheRoof.fireplace);
         System.out.println();
 
-        Malish.setState(Feelings.GOOD);
-        Malish.setState(Feelings.COSY);
-        Malish.setState(Feelings.CALM);
-        System.out.println();
-
-        Carlson.setState(Feelings.GOOD);
-        Carlson.setState(Feelings.COSY);
-        Carlson.setState(Feelings.CALM);
-        System.out.println();
-
         Carlson.fly(hetergeStreet);
         Carlson.move(hetergeStreet.Houses[1]);
-        Carlson.buy(new Apple());
+        Carlson.buy(apple);
     }
 }

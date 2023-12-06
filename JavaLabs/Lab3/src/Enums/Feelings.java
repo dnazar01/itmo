@@ -7,5 +7,6 @@ public enum Feelings {
     GOOD,
     CONFUSED,
     SOLID,
-    COSY
+    COSY,
+    CLEVER
 }

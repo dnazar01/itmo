@@ -2,38 +2,42 @@ package Entities;
 
 import Enums.Feelings;
 import Interfaces.*;
+public class Provocateur extends Character implements Flyable {
+    private int moneyOnWallet = 10000000;
 
-public class Provocateur extends Character implements Flyable, Movable{
-    public Provocateur(){
+    public Provocateur() {
         super("Карлсон");
     }
-    public void buy(Fruit fruit){
-        System.out.println(super.getName() + " купил фрукт " + fruit.getName());
+
+    public void buy(Fruit fruit) {
+        if (this.moneyOnWallet - fruit.getPrice() >= 0) {
+            System.out.println(super.getName() + " купил фрукт " + fruit.getName());
+            this.moneyOnWallet -= fruit.getPrice();
+        } else {
+            System.out.println("У " + this.getName() + " недостаточно средств");
+        }
     }
-    public void seemEarnestly(){
+
+    public void seemEarnestly() {
         System.out.println(super.getName() + "у показалось это убедительно");
         this.setState(Feelings.SOLID);
     }
-    public void provocate(Child child){
-        System.out.println(super.getName() + " провоцирует " + child.getName());
-    }
-    public void fly(Place place){
+
+    public void fly(Place place) {
         super.setLocation(place);
         System.out.println(super.getName() + " прилетел в " + place.getName());
     }
 
-    public void move(Place place){
-        super.setLocation(place);
-        System.out.println(super.getName() + " переместился в " + place.getName());
-    }
-    public void seat(Place place){
-        super.setLocation(place);
-        if (place.getClass() == Fireplace.class){
+    @Override
+    public void seat(Place place) {
+        this.setLocation(place);
+        if (place.getClass() == Fireplace.class) {
             System.out.println(super.getName() + " сидит у камина в Домике на крыше");
-        }
-        else {
+            this.setState(Feelings.GOOD);
+            this.setState(Feelings.COSY);
+            this.setState(Feelings.CALM);
+        } else {
             System.out.println(super.getName() + " сидит в " + place.getName());
         }
-
     }
 }

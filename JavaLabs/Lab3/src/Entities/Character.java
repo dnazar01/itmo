@@ -1,18 +1,20 @@
 package Entities;
 
 import Enums.Feelings;
+import Interfaces.Movable;
 
 import java.util.Objects;
 
-public abstract class Character {
-    private String name;
-    private Feelings state;
-    private Place location;
+public abstract class Character implements Movable {
+    private String name=null;
+    private Feelings state=null;
+    private Place location=null;
 
     public Character(String name) {
         this.name = name;
     }
 
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -20,6 +22,7 @@ public abstract class Character {
         return Objects.equals(name, character.name) && Objects.equals(state, character.state) && Objects.equals(location, character.location);
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(name);
     }
@@ -28,6 +31,7 @@ public abstract class Character {
         return this.name;
     }
 
+    @Override
     public String toString() {
         return this.getName();
     }
@@ -56,6 +60,9 @@ public abstract class Character {
             case COSY:
                 System.out.println(this.getName() + " чувствует себя " + "уютно");
                 break;
+            case CLEVER:
+                System.out.println(this.getName() + " чувствует себя " + "умным");
+                break;
         }
 
     }
@@ -65,7 +72,23 @@ public abstract class Character {
     }
 
     public void setLocation(Place place) {
+        if (this.location != null){
+            this.location.removeGuest(this);
+        }
         this.location = place;
+        place.guests.add(this);
+    }
+
+    public void move(Place place) {
+        this.setLocation(place);
+        System.out.println(this.name + " переместился в " + place.getName());
+    }
+
+    public void seat(Place place) {
+        this.setLocation(place);
+        System.out.println(this.name + " сидит в " + place.getName());
     }
 
 }
+
+

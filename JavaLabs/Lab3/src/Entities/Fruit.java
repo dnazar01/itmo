@@ -8,36 +8,47 @@ public abstract class Fruit {
     private String name;
     private String color;
     private String grade;
-    public Fruit(String name, String color, String grade){
+    private int price;
+
+    public Fruit(String name, String color, String grade, int price) {
         this.name = name;
         this.color = color;
-        this.grade =  grade;
+        this.grade = grade;
+        this.price = price;
     }
 
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fruit fruit = (Fruit) o;
         return Objects.equals(name, fruit.name) && Objects.equals(color, fruit.color) && Objects.equals(grade, fruit.grade);
     }
+
+    @Override
     public int hashCode() {
         return Objects.hash(name);
     }
+
     public String getName() {
         return this.name;
     }
 
+    @Override
     public String toString() {
         return this.getName();
     }
-    public void setName(String newName){
-        this.name = newName;
+
+    public String getColor() {
+        return this.color;
     }
-    public void setColor(String newColor){
+
+    public int getPrice() {
+        return this.price;
+    }
+
+    public void setColor(String newColor) {
         this.color = newColor;
     }
 
-    public void setGrade(String newGrade){
-        this.grade = newGrade;
-    }
 }
