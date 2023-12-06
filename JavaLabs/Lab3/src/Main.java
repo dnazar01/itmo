@@ -23,7 +23,7 @@ public class Main {
         MissBock.spendLastHoursInCalm(SvatensonHouse);
         System.out.println();
 
-        Malish.seat(houseOnTheRoof);
+        Malish.seat(houseOnTheRoof.fireplace);
         Carlson.seat(houseOnTheRoof.fireplace);
         System.out.println();
 
