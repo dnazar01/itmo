@@ -40,7 +40,7 @@ public class Provocateur extends Character implements Flyable {
                     if (guest instanceof Housekeeper) {
                         this.setState(Feelings.SAD);
                         System.out.println("Потому что рядом есть " + guest.getName());
-                        flag = Boolean.FALSE;
+                        flag = false;
                     }
                 }
             }
