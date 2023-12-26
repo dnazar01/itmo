@@ -11,17 +11,18 @@ public class House extends Place {
         return fireplace;
     }
 
-    public void setFireplace(){
+    public void setFireplace() {
         fireplace = new House.Fireplace("Камин", 5);
     }
-    public class Fireplace extends Place{
+
+    public class Fireplace extends Place {
         private int amountOfCoal;
 
         public Fireplace(String name, int chaosPoints) {
             super("Камин", 5);
         }
 
-        public String getLocation(){
+        public String getLocation() {
             return House.super.getName();
         }
 
