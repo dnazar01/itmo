@@ -1,13 +1,23 @@
 package Enums;
 
 public enum Feelings {
-    SAD,
-    CALM,
-    COMFORT,
-    GOOD,
-    CONFUSED,
-    SOLID,
-    COSY,
-    CLEVER,
-    ANNOYED
+    SAD("грустно"),
+    CALM("спокойно"),
+    COMFORT("комфортно"),
+    GOOD("хорошо"),
+    CONFUSED("растерянно"),
+    SOLID("убедительно"),
+    COSY("уютно"),
+    CLEVER("умно"),
+    ANNOYED("раздраженно");
+
+    private final String translation;
+
+    Feelings(String translation) {
+        this.translation = translation;
+    }
+
+    public String getTranslation() {
+        return translation;
+    }
 }

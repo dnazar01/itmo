@@ -2,7 +2,7 @@ package Entities;
 
 
 public class Apple extends Fruit {
-    public boolean isRot = false;
+    public boolean isRot;
 
     public Apple() {
         super("Яблоко", "Зеленый", "3", 100);
