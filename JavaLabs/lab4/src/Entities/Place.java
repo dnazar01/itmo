@@ -19,7 +19,7 @@ public abstract class Place {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(name, chaosPoints);
     }
 
     @Override

@@ -1,9 +1,8 @@
 package Entities;
 
 import Enums.Feelings;
-import Interfaces.Movable;
 
-public class Housekeeper extends Character implements Movable {
+public class Housekeeper extends Character {
     public Housekeeper() {
         super("Фрекен Бок");
     }

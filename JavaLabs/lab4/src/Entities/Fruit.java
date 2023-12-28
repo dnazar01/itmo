@@ -25,7 +25,7 @@ public abstract class Fruit {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(name, color, grade, price);
     }
 
     public String getName() {
