@@ -18,7 +18,7 @@ def most_common_words(word_counts, n):
 
 
 def test():
-    filename = 'text_test.txt'  # Путь к вашему текстовому файлу
+    filename = 'text_test.txt'  # Путь к текстовому файлу
     stopwords = {'the', 'and', 'in', 'of', 'a', 'to', 'on', 'is'}  # Пример стоп-слов
     word_counts = process_file(filename, stopwords)
     most_common = most_common_words(word_counts, 10)  # Наиболее часто встречающиеся 10 слов

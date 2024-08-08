@@ -1652,7 +1652,7 @@ HOGWARTS SCHOOL of WITCHCRAFT and WIZARDRY
 
 Headmaster: ALBUS DUMBLEDORE
 
-(Order of Merlin, First Class, Grand Sorc., Chf. Warlock, Supreme
+(OrderModel of Merlin, First Class, Grand Sorc., Chf. Warlock, Supreme
 Mugwump, International Confed. of Wizards)
 
 Dear Mr. Potter,
