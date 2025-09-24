@@ -1,1 +1,180 @@
-create project
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Музыкальный магазин</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shop" id="app">
+    <header class="shop__header">
+      <div class="container">
+        <div class="shop__brand">Магазин музыкальных инструментов</div>
+        <a class="shop__cart-button" href="#cart">
+          <span>Корзина</span>
+          <span class="shop__cart-badge" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="shop__main">
+      <section class="shop__products">
+        <div class="container">
+            <h1 id="productsTitle">Каталог музыкальных инструментов</h1>
+            <div class="shop__grid" id="productsGrid">
+                <article class="product__card">
+                    <div class="product__card-media">
+                        <img src="img/1.webp" alt="Электрогитара Stratocaster">
+                    </div>
+                    <div class="product__card-body">
+                        <h2 class="product__card-title">Электрогитара Stratocaster</h2>
+                        <div class="product__card-row">
+                            <div class="product__card-price">49 990 ₽</div>
+                            <button class="product__card-btn"
+                                data-id="gtr-strat"
+                                data-name="Электрогитара Stratocaster"
+                                data-price="49990"
+                                data-img="img/1.webp">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product__card">
+                    <div class="product__card-media">
+                        <img src="img/2.webp" alt="Электрогитара Les Paul">
+                    </div>
+                    <div class="product__card-body">
+                        <h2 class="product__card-title">Электрогитара Les Paul</h2>
+                        <div class="product__card-row">
+                            <div class="product__card-price">79 990 ₽</div>
+                            <button class="product__card-btn"
+                                data-id="gtr-lespaul"
+                                data-name="Электрогитара Les Paul"
+                                data-price="79990"
+                                data-img="img/2.webp">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product__card">
+                    <div class="product__card-media">
+                        <img src="img/3.webp" alt="Электрогитара Telecaster">
+                    </div>
+                    <div class="product__card-body">
+                        <h2 class="product__card-title">Электрогитара Telecaster</h2>
+                        <div class="product__card-row">
+                            <div class="product__card-price">59 990 ₽</div>
+                            <button class="product__card-btn"
+                                data-id="gtr-telec"
+                                data-name="Электрогитара Telecaster"
+                                data-price="59990"
+                                data-img="img/3.webp">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product__card">
+                    <div class="product__card-media">
+                        <img src="img/4.webp" alt="Барабанная установка">
+                    </div>
+                    <div class="product__card-body">
+                        <h2 class="product__card-title">Барабанная установка</h2>
+                        <div class="product__card-row">
+                            <div class="product__card-price">99 990 ₽</div>
+                            <button class="product__card-btn"
+                                data-id="drums"
+                                data-name="Барабанная установка"
+                                data-price="99990"
+                                data-img="img/4.webp">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product__card">
+                    <div class="product__card-media">
+                        <img src="img/5.webp" alt="Скрипка">
+                    </div>
+                    <div class="product__card-body">
+                        <h2 class="product__card-title">Скрипка</h2>
+                        <div class="product__card-row">
+                            <div class="product__card-price">95 990 ₽</div>
+                            <button class="product__card-btn"
+                                data-id="skripka"
+                                data-name="Скрипка"
+                                data-price="95990"
+                                data-img="img/5.webp">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product__card">
+                    <div class="product__card-media">
+                        <img src="img/6.webp" alt="Бас гитара">
+                    </div>
+                    <div class="product__card-body">
+                        <h2 class="product__card-title">Бас гитара</h2>
+                        <div class="product__card-row">
+                            <div class="product__card-price">49 990 ₽</div>
+                            <button class="product__card-btn"
+                                data-id="gtr-bass"
+                                data-name="Бас гитара"
+                                data-price="49990"
+                                data-img="img/6.webp">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product__card">
+                    <div class="product__card-media">
+                        <img src="img/7.webp" alt="Электрогитара Stratocaster">
+                    </div>
+                    <div class="product__card-body">
+                        <h2 class="product__card-title">Флейта</h2>
+                        <div class="product__card-row">
+                            <div class="product__card-price">29 990 ₽</div>
+                            <button class="product__card-btn"
+                                data-id="fleita"
+                                data-name="Флейта"
+                                data-price="29990"
+                                data-img="img/7.webp">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product__card">
+                    <div class="product__card-media">
+                        <img src="img/8.webp" alt="Фортепиано">
+                    </div>
+                    <div class="product__card-body">
+                        <h2 class="product__card-title">Фортепиано</h2>
+                        <div class="product__card-row">
+                            <div class="product__card-price">169 990 ₽</div>
+                            <button class="product__card-btn"
+                                data-id="fortepiano"
+                                data-name="Фортепиано"
+                                data-price="169990"
+                                data-img="img/8.webp">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product__card">
+                    <div class="product__card-media">
+                        <img src="img/9.jpg" alt="Контрабас">
+                    </div>
+                    <div class="product__card-body">
+                        <h2 class="product__card-title">Контрабас</h2>
+                        <div class="product__card-row">
+                            <div class="product__card-price">49 990 ₽</div>
+                            <button class="product__card-btn"
+                                data-id="kontrabas"
+                                data-name="Контрабас"
+                                data-price="49990"
+                                data-img="img/9.jpg">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
