@@ -174,7 +174,53 @@
             </div>
         </div>
       </section>
+
+      <section class="cart" id="cart">
+        <div class="container">
+            <div class="cart__title">Корзина</div>
+          <div class="cart__list" id="cartList">
+            <p class="cart__empty" id="cartEmpty">Корзина пуста</p>
+          </div>
+          <div class="cart__summary">
+            <div class="cart__total">Итого: <span id="cartTotal">0 ₽</span></div>
+            <button class="cart__checkout" id="checkoutBtn" type="button">Оформить заказ</button>
+          </div>
+        </div>
+        
+      </section>
     </main>
   </div>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal__dialog">
+      <div class="modal__header">
+        <div class="modal__title" id="checkoutTitle">Оформление заказа</div>
+        <button class="modal__close" type="button" id="closeModalBtn" aria-label="Закрыть">✕</button>
+      </div>
+      <form class="form" id="checkoutForm">
+        <div class="form__row">
+          <div class="form__control">
+            <label class="form__label" for="firstName">Имя</label>
+            <input class="form__input" id="firstName" name="firstName" required />
+          </div>
+          <div class="form__control">
+            <label class="form__label" for="lastName">Фамилия</label>
+            <input class="form__input" id="lastName" name="lastName" required />
+          </div>
+        </div>
+        <div class="form__control">
+          <label class="form__label" for="address">Адрес доставки</label>
+          <input class="form__input" id="address" name="address" required />
+        </div>
+        <div class="form__control">
+          <label class="form__label" for="phone">Контактный номер телефона</label>
+          <input class="form__input" id="phone" name="phone" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" required />
+        </div>
+        <button class="form__submit" type="submit">Создать заказ</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
