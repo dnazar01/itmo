@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+header {
+  background: #2c7be5;
+  color: #fff;
+  padding: 18px 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  text-align: center;
+}
+
+.main {
+  padding: 16px 0 40px;
+}
+
+.main__top {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.btn {
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: #2c7be5;
+  color: #fff;
+}
+
+.block {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 12px 14px;
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.block__title {
+  font-weight: 700;
+}
+
+.block__status {
+  font-size: 12px;
+  color: #666;
+}
+
+.error {
+  color: #c62828;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.form {
+  display: none;
+  gap: 10px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin: 10px 0 8px;
+}
+
+.field {
+  position: relative;
+  flex: 1 1 280px;
+  min-width: 220px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.12);
+  font-size: 14px;
+}
+
+.fieldError {
+  font-size: 12px;
+  color: #c62828;
+  margin-top: 6px;
+  min-height: 16px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  max-height: 220px;
+  overflow: auto;
+}
+
+.dropdown__item {
+  padding: 9px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown__item:hover {
+  background: #f1f6ff;
+}
+
+.content {
+  display: grid;
+  gap: 10px;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.day {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 10px;
+  background: #fafafa;
+  min-height: 84px;
+}
+
+.day__date {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.day__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #333;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.loader {
+  display: inline-block;
+  padding: 8px 10px;
+  background: #f1f1f1;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #444;
+}
+
+.cities {
+  display: grid;
+  gap: 10px;
+}
+
+.cityCard {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 10px;
+  background: #fafafa;
+}
+
+.cityHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.cityName {
+  font-weight: 700;
+}
+
+.iconBtn {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.34);
+}
+
+.modal__card {
+  position: relative;
+  z-index: 101;
+  width: min(520px, calc(100% - 24px));
+  margin: 90px auto 0;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.modal__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.modal__title {
+  font-weight: 700;
+}
+
+.modal__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 740px) {
+  .forecast {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal .form {
+  display: flex;
+}
+
