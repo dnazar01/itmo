@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather ura ura</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Прогноз погоды</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="main">
+      <div class="container">
+        <div class="main__top">
+          <button class="btn" id="btnRefresh">Обновить</button>
+          <button class="btn" id="btnAddCity">Добавить город</button>
+        </div>
+
+        <div class="block" id="geoBlock">
+          <div class="row">
+            <div class="block__title">Текущее местоположение</div>
+            <div class="block__status" id="geoStatus"></div>
+          </div>
+          <div class="content" id="geoContent"></div>
+          <div class="error" id="geoError"></div>
+        </div>
+
+        <div class="block" id="primaryCityBlock">
+          <div class="row">
+            <div class="title">Выбранный город</div>
+            <div class="small" id="primaryCityStatus"></div>
+          </div>
+
+          <form class="form" id="primaryCityForm">
+            <div class="field">
+              <label class="label">Город</label>
+              <input class="input" id="primaryCityInput" type="text" autocomplete="off" placeholder="Начните вводить...">
+              <div class="dropdown" id="primaryCityDropdown"></div>
+              <div class="fieldError" id="primaryCityFieldError"></div>
+            </div>
+            <button class="btn btn-primary" type="submit">Сохранить</button>
+          </form>
+
+          <div class="content" id="primaryCityContent"></div>
+          <div class="error" id="primaryCityError"></div>
+        </div>
+
+        <div class="block">
+          <div class="row">
+            <div class="block__title">Дополнительные города</div>
+            <div class="block__status" id="citiesHint">Можно добавить минимум 2</div>
+          </div>
+
+          <div class="cities" id="citiesList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="addCityModal">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__card">
+      <div class="modal__head">
+        <div class="modal__title">Добавить город</div>
+        <button class="iconBtn" id="btnCloseModal">✕</button>
+      </div>
+
+      <form class="form" id="addCityForm">
+        <div class="field">
+          <label class="label">Город</label>
+          <input class="input" id="addCityInput" type="text" autocomplete="off" placeholder="Например: Saratov">
+          <div class="dropdown" id="addCityDropdown"></div>
+          <div class="fieldError" id="addCityFieldError"></div>
+        </div>
+        <div class="modal__actions">
+          <button class="btn btn-primary" type="submit">Добавить</button>
+          <button class="btn" type="button" id="btnCancelModal">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
